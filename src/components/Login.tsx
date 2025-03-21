@@ -3,6 +3,10 @@
 import { FcGoogle } from 'react-icons/fc'; // You'll need to install react-icons
 import { signInWithGoogle } from '../auth/authService';
 import { useNavigate } from 'react-router-dom';
+import task from "../assets/task.png"
+import circlebg from "../assets/circles_bg.png"
+import tasklist from "../assets/Task list view 3.png"
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,7 +36,7 @@ const Login = () => {
         <div className="w-full md:w-1/2 max-w-md py-12 flex flex-col justify-center">
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <img src="src\assets\task.png" alt="TaskBuddy Logo" className="h-10" />
+              <img src={task} alt="TaskBuddy Logo" className="h-10" />
               <h2 className="text-3xl font-bold text-[#7B1984]">TaskBuddy</h2>
             </div>
             <p className="text-black text-sm mb-4 font-medium">
@@ -54,14 +58,14 @@ const Login = () => {
           {/* Circle background image */}
           <img 
             className="max-w-full h-auto object-cover" 
-            src="src\assets\circles_bg.png" 
+            src={circlebg} 
             alt="Background Circles" 
           />
           
           {/* Foreground image centered within the circle */}
           <img 
             className="absolute right-0 max-w-2/3 h-auto"
-            src="src\assets\Task list view 3.png" 
+            src={tasklist} 
             alt="TaskBuddy Illustration" 
           />
         </div>

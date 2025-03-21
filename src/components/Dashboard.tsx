@@ -4,6 +4,13 @@ import { useNavigate } from "react-router-dom";
 import { User } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 import { logOut } from "../auth/authService";
+import taskIcon from "../assets/task_icon.png";
+import elipse from "../assets/Ellipse 326.png";
+import list from "../assets/list.png";
+import group from "../assets/Group 1171276211.png";
+import xmlid from "../assets/XMLID_6_.png";
+import plus from "../assets/plus.svg";
+import chevrond from "../assets/chevron-down.svg";
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
@@ -47,7 +54,7 @@ const Dashboard: React.FC = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
               <img
-                src="/src/assets/task_icon.png"
+                src={taskIcon}
                 alt="TaskBuddy Logo"
                 className="h-8 w-8"
               />
@@ -59,7 +66,7 @@ const Dashboard: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
                 <img
-                  src="/src/assets/Ellipse 326.png"
+                  src={elipse}
                   alt="User avatar"
                   className="h-8 w-8 rounded-full"
                 />
@@ -73,7 +80,7 @@ const Dashboard: React.FC = () => {
             <div className="flex items-center gap-4">
               {/* Tab 1 */}
               <button className="flex items-center px-4 py-2 text-lg font-semibold">
-                <img className="w-5" src="src/assets/list.png" alt="" />
+                <img className="w-5" src={list} alt="" />
                 List
               </button>
 
@@ -81,7 +88,7 @@ const Dashboard: React.FC = () => {
               <button className="flex items-center px-4 py-2 text-lg font-semibold">
                 <img
                   className="w-5"
-                  src="src/assets/Group 1171276211.png"
+                  src={group}
                   alt=""
                 />
                 Board
@@ -92,7 +99,7 @@ const Dashboard: React.FC = () => {
               onClick={logOut}
               className="flex items-center gap-2 text-xs bg-[#FFF9F9] text-gray-800 font-semibold border border-[#7B1984] px-4 py-2 rounded-full hover:bg-red-100 transition cursor-pointer"
             >
-              <img src="/src/assets/XMLID_6_.png" alt="Logout" />
+              <img src={xmlid} alt="Logout" />
               Logout
             </button>
           </div>
@@ -170,10 +177,10 @@ const Dashboard: React.FC = () => {
             <p className="font-Mulish font-semibold text-black text-sm">
               Todo ()
             </p>
-            <img className="w-6" src="src\assets\chevron-down.svg" alt="" />
+            <img className="w-6" src={chevrond} alt="" />
           </div>
           <div className="py-3 border-b border-gray-300 pt-2 px-6 bg-[#F1F1F1] flex text-sm">
-            <img className="w-3" src="src\assets\plus.svg" alt="" />
+            <img className="w-3" src={plus} alt="" />
             <p className="font-bold font-Mulish text-gray-600">ADD TASK</p>
           </div>
           <div className="py-3 pt-2 px-6 bg-[#F1F1F1] min-h-50 flex items-center justify-center text-sm rounded-b-2xl">
@@ -189,7 +196,7 @@ const Dashboard: React.FC = () => {
             <p className="font-Mulish font-semibold text-black text-sm">
               In-Progress ()
             </p>
-            <img className="w-6" src="src\assets\chevron-down.svg" alt="" />
+            <img className="w-6" src={chevrond} alt="" />
           </div>
 
           <div className="py-3 pt-2 px-6 bg-[#F1F1F1] min-h-40 flex items-center justify-center text-sm rounded-b-2xl">
@@ -205,7 +212,7 @@ const Dashboard: React.FC = () => {
             <p className="font-Mulish font-semibold text-black text-sm">
               Completed ()
             </p>
-            <img className="w-6" src="src\assets\chevron-down.svg" alt="" />
+            <img className="w-6" src={chevrond} alt="" />
           </div>
         </div>
       </div>
